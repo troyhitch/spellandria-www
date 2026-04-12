@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GameLanding from '../components/GameLanding.astro';
+import { games, type GameKey } from '../data/games';
+
+export function getStaticPaths() {
+  return (Object.keys(games) as GameKey[]).map((key) => ({
+    params: { game: key },
+    props: { game: games[key] },
+  }));
+}
+
+const { game } = Astro.props;
+---
+
+<Layout title={`${game.fullTitle} — Spellandria`} description={game.description} ogImage={game.art}>
+  <main>
+    <GameLanding game={game} />
+  </main>
+</Layout>

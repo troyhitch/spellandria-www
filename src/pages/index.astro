@@ -1,50 +1,67 @@
 ---
+export const prerender = false;
+
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
+import GameLanding from '../components/GameLanding.astro';
 import SectionWorld from '../components/SectionWorld.astro';
 import SectionNews from '../components/SectionNews.astro';
 import SectionCommunity from '../components/SectionCommunity.astro';
 import SectionShop from '../components/SectionShop.astro';
+import { getGameByHostOrPath } from '../data/games';
 
 import '../styles/global.css';
+
+const game = getGameByHostOrPath(Astro.url.hostname, Astro.url.pathname);
+const title = game ? `${game.fullTitle} — Spellandria` : 'Spellandria — Official Franchise Portal';
+const description = game ? game.description : 'Enter Spellandria: a premium fantasy game universe of arcane power, living lore, community, news, and collectible worlds.';
+const ogImage = game ? game.art : '/assets/generated/spellandria-hero-world.jpg';
 ---
 
-<Layout>
-  <Nav />
-  <main>
-    <Hero />
-    <SectionWorld />
-    <SectionNews />
-    <SectionCommunity />
-    <SectionShop />
-  </main>
+<Layout title={title} description={description} ogImage={ogImage}>
+  {game ? (
+    <main>
+      <GameLanding game={game} />
+    </main>
+  ) : (
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <SectionWorld />
+        <SectionNews />
+        <SectionCommunity />
+        <SectionShop />
+      </main>
 
-  <footer
-    class="border-t mt-0 py-10 px-6 md:px-10"
-    style="border-color: rgba(255,255,255,0.08);"
-  >
-    <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-      <img
-        src="/assets/logo/SPELLANDRIA_logo-thumb.png"
-        alt="Spellandria"
-        class="h-12 w-auto max-w-[200px]"
-        style="filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5)); opacity: 0.85;"
-      />
-      <p class="text-xs text-center" style="color: rgba(244,239,232,0.4);">
-        &copy; {new Date().getFullYear()} Spellandria. All rights reserved.
-      </p>
-      <nav class="flex gap-6" aria-label="Footer navigation">
-        {['World', 'News', 'Community', 'Shop'].map(link => (
-          <a
-            href={`#${link.toLowerCase()}`}
-            class="text-xs font-bold no-underline hover:opacity-100 transition-opacity"
-            style="color: rgba(244,239,232,0.45);"
-          >
-            {link}
-          </a>
-        ))}
-      </nav>
-    </div>
-  </footer>
+      <footer
+        class="border-t mt-0 py-10 px-6 md:px-10"
+        style="border-color: rgba(255,255,255,0.08);"
+      >
+        <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          <img
+            src="/assets/logo/SPELLANDRIA_logo-thumb.png"
+            alt="Spellandria"
+            class="h-12 w-auto max-w-[200px]"
+            style="filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5)); opacity: 0.85;"
+          />
+          <p class="text-xs text-center" style="color: rgba(244,239,232,0.4);">
+            &copy; {new Date().getFullYear()} Spellandria. All rights reserved.
+          </p>
+          <nav class="flex gap-6" aria-label="Footer navigation">
+            {['World', 'News', 'Community', 'Shop'].map(link => (
+              <a
+                href={`#${link.toLowerCase()}`}
+                class="text-xs font-bold no-underline hover:opacity-100 transition-opacity"
+                style="color: rgba(244,239,232,0.45);"
+              >
+                {link}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </footer>
+    </>
+  )}
 </Layout>

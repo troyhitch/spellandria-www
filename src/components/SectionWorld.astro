@@ -4,18 +4,21 @@ const titles = [
     src: '/assets/identity-thumbs/duelcasters.png',
     kicker: 'The first game',
     name: 'Duelcasters',
+    href: 'https://duelcasters.spellandria.com',
     description: 'Two casters. One board. Every word a weapon. Step into the dueling halls and prove your command of the arcane.',
   },
   {
     src: '/assets/identity-thumbs/realms.png',
     kicker: 'Coming next',
     name: 'Realms',
+    href: 'https://realms.spellandria.com',
     description: 'Beyond the spires lie territories unmapped and civilizations older than the written word. The journey outward begins here.',
   },
   {
     src: '/assets/identity-thumbs/spires.png',
     kicker: 'On the horizon',
     name: 'Spires',
+    href: 'https://spires.spellandria.com',
     description: 'At the heart of Spellandria\'s greatest cities, towers reach into clouds of pure arcane energy. Some say those who climb high enough never return the same.',
   },
 ];
@@ -61,9 +64,10 @@ const titles = [
   <!-- Game title cards -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
     {titles.map(t => (
-      <article
-        class="overflow-hidden"
-        style="border-radius: 28px; border: 1px solid rgba(255,255,255,0.1); background: rgba(14,10,20,0.82); backdrop-filter: blur(18px); box-shadow: 0 24px 80px rgba(0,0,0,0.45);"
+      <a
+        href={t.href}
+        class="overflow-hidden no-underline transition-transform duration-150 hover:-translate-y-1"
+        style="border-radius: 28px; border: 1px solid rgba(255,255,255,0.1); background: rgba(14,10,20,0.82); backdrop-filter: blur(18px); box-shadow: 0 24px 80px rgba(0,0,0,0.45); display: block;"
       >
         <div class="h-56 overflow-hidden">
           <img
@@ -76,8 +80,9 @@ const titles = [
           <p class="uppercase tracking-[0.18em] text-xs font-black mb-2" style="color: #f5ce82;">{t.kicker}</p>
           <h3 class="text-xl mb-2">Spellandria: {t.name}</h3>
           <p class="text-sm">{t.description}</p>
+          <p class="text-sm font-bold mt-4" style="color: #f5ce82;">Visit game page →</p>
         </div>
-      </article>
+      </a>
     ))}
   </div>
 
