@@ -1,0 +1,103 @@
+---
+const titles = [
+  {
+    src: '/assets/identity-thumbs/duelcasters.png',
+    kicker: 'Arcane conflict',
+    name: 'Duelcasters',
+    description: 'Competitive spellcraft, rival personalities, and ceremonial magical combat.',
+  },
+  {
+    src: '/assets/identity-thumbs/realms.png',
+    kicker: 'World expansion',
+    name: 'Realms',
+    description: 'Broader geography, deeper myth, and a much larger universe beyond the duel.',
+  },
+  {
+    src: '/assets/identity-thumbs/spires.png',
+    kicker: 'Mythic scale',
+    name: 'Spires',
+    description: 'Ancient towers, vertical ambition, and the architecture of Spellandrian power.',
+  },
+];
+---
+
+<section id="world" class="max-w-screen-xl mx-auto px-6 md:px-10 pt-24 pb-0">
+  <!-- Heading -->
+  <div class="mb-8 max-w-3xl">
+    <p class="uppercase tracking-[0.18em] text-xs font-black" style="color: #f5ce82;">The World of the Game</p>
+    <h2 class="mt-3 mb-4 text-[clamp(2.1rem,5vw,4.25rem)] leading-[0.98]">
+      Ancient power. Rival orders.<br />Realms shaped by language itself.
+    </h2>
+    <p>
+      Spellandria is built to sell a universe, not just mechanics. The world is ornate, mythic, and theatrical — where every spire, faction, and ancient ruin carries the weight of a civilization that mastered the written word.
+    </p>
+  </div>
+
+  <!-- Hero lore panel -->
+  <div
+    class="relative w-full overflow-hidden mb-5"
+    style="border-radius: 28px; border: 1px solid rgba(255,255,255,0.1); min-height: 480px; box-shadow: 0 24px 80px rgba(0,0,0,0.45);"
+  >
+    <img
+      src="/assets/generated/spellandria-hero-world.jpg"
+      alt="A cinematic view of the Spellandria world"
+      class="w-full h-full object-cover object-center absolute inset-0"
+      style="min-height: 480px;"
+    />
+    <div
+      class="absolute inset-0"
+      style="background: linear-gradient(90deg, rgba(8,5,12,0.86) 0%, rgba(8,5,12,0.3) 50%, rgba(8,5,12,0.7) 100%);"
+      aria-hidden="true"
+    ></div>
+    <div class="relative z-10 p-8 md:p-12 max-w-lg">
+      <p class="uppercase tracking-[0.18em] text-xs font-black mb-3" style="color: #f5ce82;">Lore spotlight</p>
+      <h3 class="text-3xl md:text-4xl mb-4">The age of luminous spires</h3>
+      <p>
+        At the center of Spellandria rise impossible towers, arcane gates, and citadels built around written power. Every region carries its own magical lineage, rival discipline, and buried myth.
+      </p>
+    </div>
+  </div>
+
+  <!-- Franchise title cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+    {titles.map(t => (
+      <article
+        class="overflow-hidden"
+        style="border-radius: 28px; border: 1px solid rgba(255,255,255,0.1); background: rgba(14,10,20,0.82); backdrop-filter: blur(18px); box-shadow: 0 24px 80px rgba(0,0,0,0.45);"
+      >
+        <div class="h-56 overflow-hidden">
+          <img
+            src={t.src}
+            alt={`Spellandria ${t.name} identity art`}
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-6">
+          <p class="uppercase tracking-[0.18em] text-xs font-black mb-2" style="color: #f5ce82;">{t.kicker}</p>
+          <h3 class="text-xl mb-2">{t.name}</h3>
+          <p class="text-sm">{t.description}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <!-- Tone panels -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-0">
+    <article
+      class="p-8"
+      style="border-radius: 28px; border: 1px solid rgba(255,255,255,0.1); background: rgba(14,10,20,0.82); backdrop-filter: blur(18px);"
+    >
+      <p class="uppercase tracking-[0.18em] text-xs font-black mb-3" style="color: #f5ce82;">Core promise</p>
+      <h3 class="text-2xl mb-3">Magic is language made real</h3>
+      <p>The emotional hook of the franchise is simple and strong: language is power. Spelling becomes spell-casting. Knowledge becomes force. Expression becomes conflict.</p>
+    </article>
+    <article
+      class="p-8"
+      style="border-radius: 28px; border: 1px solid rgba(255,255,255,0.1); background: rgba(14,10,20,0.82); backdrop-filter: blur(18px); background-image: radial-gradient(circle at 80% 0%, rgba(141,114,255,0.14), transparent 28%);"
+    >
+      <p class="uppercase tracking-[0.18em] text-xs font-black mb-3" style="color: #f5ce82;">Visual tone</p>
+      <h3 class="text-2xl mb-3">Mythic, ornate, and serious</h3>
+      <p>The visual world leans premium and ceremonial — closer to Warcraft, Warhammer, or prestige fantasy key art than light mobile whimsy. Every asset earns its weight.</p>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = 'Spellandria — Official Franchise Portal',
+  description = 'Enter Spellandria: a premium fantasy game universe of arcane power, living lore, community, news, and collectible worlds.',
+  ogImage = '/assets/generated/spellandria-hero-world.jpg',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08050c" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={ogImage} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <slot name="head" />
+  </head>
+  <body>
+    <div
+      class="fixed inset-0 -z-10"
+      style="background: radial-gradient(circle at 20% 0%, rgba(87,164,255,0.08), transparent 28%), radial-gradient(circle at 82% 12%, rgba(216,100,168,0.07), transparent 26%), radial-gradient(circle at 50% 100%, rgba(245,206,130,0.05), transparent 38%), linear-gradient(180deg,#08050c 0%,#09060f 34%,#050408 100%);"
+      aria-hidden="true"
+    ></div>
+    <slot />
+  </body>
+</html>

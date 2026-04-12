@@ -1,0 +1,99 @@
+---
+// In production, replace with CMS/API fetch
+const featured = {
+  image: '/assets/identity-thumbs/realms.png',
+  category: 'Featured update',
+  title: 'Enter the next chapter of Spellandria',
+  excerpt: 'Flagship news modules can hold launch trailers, faction reveals, world-building essays, or major milestone announcements.',
+  href: '#',
+};
+
+const articles = [
+  {
+    category: 'Developer update',
+    title: 'Inside the language of magic',
+    excerpt: 'Design diaries, world-building notes, and behind-the-scenes production updates live here.',
+    href: '#',
+  },
+  {
+    category: 'Community spotlight',
+    title: 'Guilds, fan art, and caster stories',
+    excerpt: 'Highlight player creations, screenshots, lore theories, cosplay, or creator collaborations.',
+    href: '#',
+  },
+  {
+    category: 'Live event',
+    title: 'Seasonal duels and world events',
+    excerpt: 'Event calendars, competition schedules, launch countdowns, or seasonal reveals.',
+    href: '#',
+  },
+];
+---
+
+<section id="news" class="max-w-screen-xl mx-auto px-6 md:px-10 pt-24">
+  <!-- Heading -->
+  <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+    <div>
+      <p class="uppercase tracking-[0.18em] text-xs font-black" style="color: #f5ce82;">News</p>
+      <h2 class="mt-3 text-[clamp(2.1rem,5vw,4rem)] leading-[0.98]">
+        The latest from<br />Spellandria
+      </h2>
+    </div>
+    <a
+      href="#"
+      class="inline-flex items-center font-black text-sm no-underline shrink-0 mb-1"
+      style="color: #f5ce82;"
+    >
+      View all news &rarr;
+    </a>
+  </div>
+
+  <!-- Featured article -->
+  <article
+    class="overflow-hidden mb-5 grid md:grid-cols-[1.2fr_0.8fr]"
+    style="border-radius: 28px; border: 1px solid rgba(255,255,255,0.1); background: rgba(14,10,20,0.82); backdrop-filter: blur(18px); box-shadow: 0 24px 80px rgba(0,0,0,0.45);"
+  >
+    <div class="relative min-h-[280px]">
+      <img
+        src={featured.image}
+        alt=""
+        aria-hidden="true"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(8,5,12,0.12), rgba(8,5,12,0.72));" aria-hidden="true"></div>
+    </div>
+    <div class="flex flex-col justify-center p-8">
+      <p class="uppercase tracking-[0.18em] text-xs font-black mb-3" style="color: #f5ce82;">{featured.category}</p>
+      <h3 class="text-2xl md:text-3xl mb-4">{featured.title}</h3>
+      <p class="mb-6">{featured.excerpt}</p>
+      <a
+        href={featured.href}
+        class="font-black text-sm no-underline hover:opacity-80 transition-opacity"
+        style="color: #f4efe8;"
+      >
+        Read article &rarr;
+      </a>
+    </div>
+  </article>
+
+  <!-- Article grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+    {articles.map(a => (
+      <article
+        class="p-7 flex flex-col"
+        style="border-radius: 28px; border: 1px solid rgba(255,255,255,0.1); background: rgba(14,10,20,0.82); backdrop-filter: blur(18px);"
+      >
+        <p class="uppercase tracking-[0.18em] text-xs font-black mb-3" style="color: #f5ce82;">{a.category}</p>
+        <h3 class="text-xl mb-3">{a.title}</h3>
+        <p class="text-sm flex-1 mb-5">{a.excerpt}</p>
+        <a
+          href={a.href}
+          class="font-black text-sm no-underline hover:opacity-80 transition-opacity"
+          style="color: #f4efe8;"
+        >
+          Read more &rarr;
+        </a>
+      </article>
+    ))}
+  </div>
+</section>

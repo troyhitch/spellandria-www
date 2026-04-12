@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import SectionWorld from '../components/SectionWorld.astro';
+import SectionNews from '../components/SectionNews.astro';
+import SectionCommunity from '../components/SectionCommunity.astro';
+import SectionShop from '../components/SectionShop.astro';
+
+import '../styles/global.css';
+---
+
+<Layout>
+  <Nav />
+  <main>
+    <Hero />
+    <SectionWorld />
+    <SectionNews />
+    <SectionCommunity />
+    <SectionShop />
+  </main>
+
+  <footer
+    class="border-t mt-0 py-10 px-6 md:px-10"
+    style="border-color: rgba(255,255,255,0.08);"
+  >
+    <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <img
+        src="/assets/logo/SPELLANDRIA_logo-thumb.png"
+        alt="Spellandria"
+        class="h-8 w-auto"
+        style="filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5)); opacity: 0.85;"
+      />
+      <p class="text-xs text-center" style="color: rgba(244,239,232,0.4);">
+        &copy; {new Date().getFullYear()} Spellandria. All rights reserved.
+      </p>
+      <nav class="flex gap-6" aria-label="Footer navigation">
+        {['World', 'News', 'Community', 'Shop'].map(link => (
+          <a
+            href={`#${link.toLowerCase()}`}
+            class="text-xs font-bold no-underline hover:opacity-100 transition-opacity"
+            style="color: rgba(244,239,232,0.45);"
+          >
+            {link}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </footer>
+</Layout>

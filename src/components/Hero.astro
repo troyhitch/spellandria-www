@@ -1,0 +1,63 @@
+---
+---
+
+<section class="relative min-h-screen overflow-hidden border-b border-white/8" id="top">
+  <!-- Key art background -->
+  <div class="absolute inset-0 -z-10">
+    <img
+      src="/assets/generated/spellandria-hero-world.jpg"
+      alt=""
+      aria-hidden="true"
+      class="w-full h-full object-cover object-center"
+      style="filter: saturate(1.08) contrast(1.02);"
+    />
+  </div>
+
+  <!-- Gradient overlay -->
+  <div
+    class="absolute inset-0 -z-10"
+    style="background: linear-gradient(180deg, rgba(5,3,8,0.55) 0%, rgba(5,3,8,0.4) 24%, rgba(5,3,8,0.92) 100%), linear-gradient(90deg, rgba(5,3,8,0.84) 0%, rgba(5,3,8,0.26) 48%, rgba(5,3,8,0.72) 100%);"
+    aria-hidden="true"
+  ></div>
+
+  <div class="max-w-screen-xl mx-auto px-6 md:px-10 flex flex-col justify-center min-h-screen pt-28 pb-24">
+    <p class="uppercase tracking-[0.18em] text-xs font-black" style="color: #f5ce82;">A premium fantasy game franchise</p>
+
+    <h1 class="mt-5 mb-6 text-[clamp(3.6rem,8vw,7rem)] leading-[0.92] max-w-[9ch]"
+        style="font-family: var(--font-display); letter-spacing: 0.02em;">
+      Words become<br />spells. Spells become<br />destiny.
+    </h1>
+
+    <p class="max-w-prose text-[1.07rem]" style="color: rgba(244,239,232,0.75);">
+      Spellandria is a dark, high-fantasy game universe where language itself is power. Rival orders, arcane spires, and living realms await those who dare to master the written word.
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a
+        href="#world"
+        class="inline-flex items-center justify-center px-6 h-12 rounded-full font-black text-sm transition-all duration-150 hover:-translate-y-px no-underline"
+        style="background: linear-gradient(135deg,#f5ce82,#fff0c8); color: #23161b; box-shadow: 0 14px 40px rgba(245,206,130,0.24);"
+      >
+        Explore the world
+      </a>
+      <a
+        href="#news"
+        class="inline-flex items-center justify-center px-6 h-12 rounded-full font-black text-sm border transition-all duration-150 hover:-translate-y-px no-underline"
+        style="border-color: rgba(255,255,255,0.16); color: #f4efe8; background: rgba(255,255,255,0.05);"
+      >
+        Latest news
+      </a>
+    </div>
+
+    <ul class="mt-7 flex flex-wrap gap-2.5 list-none p-0 m-0">
+      {['World & Lore', 'News Hub', 'Community Gateway', 'Shopify Store'].map(item => (
+        <li
+          class="px-4 py-2.5 rounded-full text-sm"
+          style="border: 1px solid rgba(255,255,255,0.09); background: rgba(10,8,15,0.55); color: rgba(244,239,232,0.7);"
+        >
+          {item}
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

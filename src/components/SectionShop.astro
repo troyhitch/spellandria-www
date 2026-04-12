@@ -1,0 +1,103 @@
+---
+// Shopify integration: replace these with real product data from Shopify Storefront API
+// e.g., fetch(`https://${shopDomain}/api/2024-10/graphql.json`, { method: 'POST', headers: { 'X-Shopify-Storefront-Access-Token': token }, body: JSON.stringify({ query: PRODUCTS_QUERY }) })
+
+const collections = [
+  {
+    kicker: 'Featured drops',
+    title: 'Limited collector items',
+    description: 'Hero carousel or featured products grid. Populated from Shopify via Storefront API.',
+    placeholder: true,
+  },
+  {
+    kicker: 'Collector line',
+    title: 'Prestige editions',
+    description: 'Art books, sigils, boxed editions, realm maps, enamel sets — the prestige tier.',
+    placeholder: true,
+  },
+  {
+    kicker: 'Evergreen merch',
+    title: 'Apparel & accessories',
+    description: 'Faction-inspired goods, apparel, prints, and accessories organized by collection.',
+    placeholder: true,
+  },
+];
+---
+
+<section id="shop" class="max-w-screen-xl mx-auto px-6 md:px-10 pt-24 pb-24">
+  <!-- Heading -->
+  <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+    <div>
+      <p class="uppercase tracking-[0.18em] text-xs font-black" style="color: #f5ce82;">Shop</p>
+      <h2 class="mt-3 text-[clamp(2.1rem,5vw,4rem)] leading-[0.98]">
+        Collector editions,<br />artifacts & franchise merch
+      </h2>
+    </div>
+    <a
+      href="#"
+      class="inline-flex items-center font-black text-sm no-underline shrink-0 mb-1 hover:opacity-80 transition-opacity"
+      style="color: #f5ce82;"
+    >
+      Browse all products &rarr;
+    </a>
+  </div>
+
+  <!-- Key art + collections -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <!-- Shop image -->
+    <div
+      class="overflow-hidden min-h-[420px]"
+      style="border-radius: 28px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 24px 80px rgba(0,0,0,0.45);"
+    >
+      <img
+        src="/assets/generated/spellandria-shop-display-clean.png"
+        alt="Spellandria merchandise and collectibles"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- Collections copy -->
+    <div class="flex flex-col gap-5">
+      <!-- Shopify connect note -->
+      <div
+        class="p-7"
+        style="border-radius: 28px; border: 1px solid rgba(245,206,130,0.28); background: rgba(245,206,130,0.05); backdrop-filter: blur(12px);"
+      >
+        <p class="uppercase tracking-[0.18em] text-xs font-black mb-2" style="color: #f5ce82;">Shopify integration ready</p>
+        <h3 class="text-lg mb-2">Wire in your store</h3>
+        <p class="text-sm mb-4">
+          This layout connects to Shopify via the Storefront API. Once your store is live, products, collections, and variant data replace the placeholders below automatically.
+        </p>
+        <a
+          href="https://shopify.dev/docs/api/storefront"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center font-black text-sm no-underline hover:opacity-80 transition-opacity"
+          style="color: #f5ce82;"
+        >
+          Storefront API docs &rarr;
+        </a>
+      </div>
+
+      <!-- Collection tiles -->
+      {collections.map(c => (
+        <article
+          class="p-6 flex items-start justify-between gap-4"
+          style="border-radius: 22px; border: 1px solid rgba(255,255,255,0.09); background: rgba(14,10,20,0.82); backdrop-filter: blur(12px);"
+        >
+          <div class="flex-1">
+            <p class="uppercase tracking-[0.16em] text-[0.68rem] font-black mb-1.5" style="color: #f5ce82;">{c.kicker}</p>
+            <h3 class="text-lg mb-1.5">{c.title}</h3>
+            <p class="text-sm">{c.description}</p>
+          </div>
+          <span
+            class="shrink-0 self-center px-3 py-1.5 rounded-full text-xs font-black"
+            style="border: 1px solid rgba(255,255,255,0.1); color: rgba(244,239,232,0.5); background: rgba(255,255,255,0.03);"
+          >
+            Coming soon
+          </span>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
