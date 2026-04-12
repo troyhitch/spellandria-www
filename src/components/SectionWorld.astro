@@ -2,21 +2,21 @@
 const titles = [
   {
     src: '/assets/identity-thumbs/duelcasters.png',
-    kicker: 'Arcane conflict',
+    kicker: 'The first game',
     name: 'Duelcasters',
-    description: 'Competitive spellcraft, rival personalities, and ceremonial magical combat.',
+    description: 'Two casters. One board. Every word a weapon. Step into the dueling halls and prove your command of the arcane.',
   },
   {
     src: '/assets/identity-thumbs/realms.png',
-    kicker: 'World expansion',
+    kicker: 'Coming next',
     name: 'Realms',
-    description: 'Broader geography, deeper myth, and a much larger universe beyond the duel.',
+    description: 'Beyond the spires lie territories unmapped and civilizations older than the written word. The journey outward begins here.',
   },
   {
     src: '/assets/identity-thumbs/spires.png',
-    kicker: 'Mythic scale',
+    kicker: 'On the horizon',
     name: 'Spires',
-    description: 'Ancient towers, vertical ambition, and the architecture of Spellandrian power.',
+    description: 'At the heart of Spellandria\'s greatest cities, towers reach into clouds of pure arcane energy. Some say those who climb high enough never return the same.',
   },
 ];
 ---
@@ -24,12 +24,12 @@ const titles = [
 <section id="world" class="max-w-screen-xl mx-auto px-6 md:px-10 pt-24 pb-0">
   <!-- Heading -->
   <div class="mb-8 max-w-3xl">
-    <p class="uppercase tracking-[0.18em] text-xs font-black" style="color: #f5ce82;">The World of the Game</p>
+    <p class="uppercase tracking-[0.18em] text-xs font-black" style="color: #f5ce82;">The world</p>
     <h2 class="mt-3 mb-4 text-[clamp(2.1rem,5vw,4.25rem)] leading-[0.98]">
       Ancient power. Rival orders.<br />Realms shaped by language itself.
     </h2>
     <p>
-      Spellandria is built to sell a universe, not just mechanics. The world is ornate, mythic, and theatrical — where every spire, faction, and ancient ruin carries the weight of a civilization that mastered the written word.
+      Long before kingdoms rose and fell, there was the Word. The first mages of Spellandria discovered that language, spoken with precision and intent, could reshape reality. They built orders around this truth. They raised towers to study it. They went to war over it. That war never truly ended — it simply moved into the dueling halls, the academies, and the hidden vaults beneath the great spires. It moves through you now.
     </p>
   </div>
 
@@ -40,7 +40,7 @@ const titles = [
   >
     <img
       src="/assets/generated/spellandria-hero-world.jpg"
-      alt="A cinematic view of the Spellandria world"
+      alt="The luminous spires of Spellandria rise above a divided realm"
       class="w-full h-full object-cover object-center absolute inset-0"
       style="min-height: 480px;"
     />
@@ -50,15 +50,15 @@ const titles = [
       aria-hidden="true"
     ></div>
     <div class="relative z-10 p-8 md:p-12 max-w-lg">
-      <p class="uppercase tracking-[0.18em] text-xs font-black mb-3" style="color: #f5ce82;">Lore spotlight</p>
-      <h3 class="text-3xl md:text-4xl mb-4">The age of luminous spires</h3>
+      <p class="uppercase tracking-[0.18em] text-xs font-black mb-3" style="color: #f5ce82;">Lore</p>
+      <h3 class="text-3xl md:text-4xl mb-4">The age of the luminous spires</h3>
       <p>
-        At the center of Spellandria rise impossible towers, arcane gates, and citadels built around written power. Every region carries its own magical lineage, rival discipline, and buried myth.
+        The great spires were not built — they were grown, fed by centuries of concentrated arcane inscription. Each one is a living library, a fortress, and a beacon. The order that controls a spire controls the flow of magical knowledge across an entire region. Control enough of them, and you control the world. No one has ever controlled enough of them. Not yet.
       </p>
     </div>
   </div>
 
-  <!-- Franchise title cards -->
+  <!-- Game title cards -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
     {titles.map(t => (
       <article
@@ -68,36 +68,36 @@ const titles = [
         <div class="h-56 overflow-hidden">
           <img
             src={t.src}
-            alt={`Spellandria ${t.name} identity art`}
+            alt={`Spellandria: ${t.name}`}
             class="w-full h-full object-cover"
           />
         </div>
         <div class="p-6">
           <p class="uppercase tracking-[0.18em] text-xs font-black mb-2" style="color: #f5ce82;">{t.kicker}</p>
-          <h3 class="text-xl mb-2">{t.name}</h3>
+          <h3 class="text-xl mb-2">Spellandria: {t.name}</h3>
           <p class="text-sm">{t.description}</p>
         </div>
       </article>
     ))}
   </div>
 
-  <!-- Tone panels -->
+  <!-- Lore panels -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-0">
     <article
       class="p-8"
       style="border-radius: 28px; border: 1px solid rgba(255,255,255,0.1); background: rgba(14,10,20,0.82); backdrop-filter: blur(18px);"
     >
-      <p class="uppercase tracking-[0.18em] text-xs font-black mb-3" style="color: #f5ce82;">Core promise</p>
-      <h3 class="text-2xl mb-3">Magic is language made real</h3>
-      <p>The emotional hook of the franchise is simple and strong: language is power. Spelling becomes spell-casting. Knowledge becomes force. Expression becomes conflict.</p>
+      <p class="uppercase tracking-[0.18em] text-xs font-black mb-3" style="color: #f5ce82;">The arcane truth</p>
+      <h3 class="text-2xl mb-3">To speak is to cast</h3>
+      <p>Every word in Spellandria carries a resonance — a frequency of intention that, when shaped correctly, becomes force. Casters spend lifetimes learning to feel the weight of a word before they speak it. In a duel, there is no time for hesitation. You trace the word into existence, you commit to its meaning, and you hold nothing back.</p>
     </article>
     <article
       class="p-8"
       style="border-radius: 28px; border: 1px solid rgba(255,255,255,0.1); background: rgba(14,10,20,0.82); backdrop-filter: blur(18px); background-image: radial-gradient(circle at 80% 0%, rgba(141,114,255,0.14), transparent 28%);"
     >
-      <p class="uppercase tracking-[0.18em] text-xs font-black mb-3" style="color: #f5ce82;">Visual tone</p>
-      <h3 class="text-2xl mb-3">Mythic, ornate, and serious</h3>
-      <p>The visual world leans premium and ceremonial — closer to Warcraft, Warhammer, or prestige fantasy key art than light mobile whimsy. Every asset earns its weight.</p>
+      <p class="uppercase tracking-[0.18em] text-xs font-black mb-3" style="color: #f5ce82;">The orders</p>
+      <h3 class="text-2xl mb-3">A world of rival traditions</h3>
+      <p>The Luminant, the Ashcroft Guild, the Silent Codex, the Thornbound — each order has its own theory of the Word, its own casting style, and its own idea of what Spellandria should become. A duelcaster does not fight alone. They carry the weight of their lineage into every match.</p>
     </article>
   </div>
 </section>
