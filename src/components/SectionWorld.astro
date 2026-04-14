@@ -3,21 +3,21 @@ const titles = [
   {
     src: '/assets/identity-thumbs/duelcasters.png',
     kicker: 'The first game',
-    name: 'Duelcasters',
+    name: 'DuelCasters of Spellandria',
     href: 'https://duelcasters.spellandria.com',
     description: 'Two casters. One board. Every word a weapon. Step into the dueling halls and prove your command of the arcane.',
   },
   {
     src: '/assets/identity-thumbs/realms.png',
     kicker: 'Coming next',
-    name: 'Realms',
+    name: 'Realms of Spellandria',
     href: 'https://realms.spellandria.com',
     description: 'Beyond the spires lie territories unmapped and civilizations older than the written word. The journey outward begins here.',
   },
   {
     src: '/assets/identity-thumbs/spires.png',
     kicker: 'On the horizon',
-    name: 'Spires',
+    name: 'Spires of Spellandria',
     href: 'https://spires.spellandria.com',
     description: 'At the heart of Spellandria\'s greatest cities, towers reach into clouds of pure arcane energy. Some say those who climb high enough never return the same.',
   },
@@ -72,13 +72,13 @@ const titles = [
         <div class="h-56 overflow-hidden">
           <img
             src={t.src}
-            alt={`Spellandria: ${t.name}`}
+            alt={t.name}
             class="w-full h-full object-cover"
           />
         </div>
         <div class="p-6">
           <p class="uppercase tracking-[0.18em] text-xs font-black mb-2" style="color: #f5ce82;">{t.kicker}</p>
-          <h3 class="text-xl mb-2">Spellandria: {t.name}</h3>
+          <h3 class="text-xl mb-2">{t.name}</h3>
           <p class="text-sm">{t.description}</p>
           <p class="text-sm font-bold mt-4" style="color: #f5ce82;">Visit game page →</p>
         </div>
@@ -102,7 +102,7 @@ const titles = [
     >
       <p class="uppercase tracking-[0.18em] text-xs font-black mb-3" style="color: #f5ce82;">The orders</p>
       <h3 class="text-2xl mb-3">A world of rival traditions</h3>
-      <p>The Luminant, the Ashcroft Guild, the Silent Codex, the Thornbound — each order has its own theory of the Word, its own casting style, and its own idea of what Spellandria should become. A duelcaster does not fight alone. They carry the weight of their lineage into every match.</p>
+      <p>Syllabriar calls on living nature, its wood-elf casters weaving roots, ivy, and old green force into their spellcraft. Etymoor draws from the gloomy poetry of the moor — storm-dark language, tragic cadence, and the theatrical weight of old verse. Lexicanica belongs to the gnomes, who build enchanted, steampunk typewriter-like devices that hammer words into reality with brass precision. Each tradition has its own theory of the Word, its own casting style, and its own idea of what Spellandria should become.</p>
     </article>
   </div>
 </section>
