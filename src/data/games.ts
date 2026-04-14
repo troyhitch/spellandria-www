@@ -48,7 +48,7 @@ export const games: Record<GameKey, GameConfig> = {
     overviewTitle: 'The world outside the spires',
     overviewBody: 'Realms opens the map. Beyond the academies and ritual chambers lies a continent of broken covenants, vanished languages, and territories that remember old wars better than the people living in them.',
     promiseTitle: 'A larger stage for Spellandria',
-    promiseBody: 'Where DuelCasters introduces the logic of the world, Realms is where that world starts breathing. Expect bigger places, stranger magic, and a more expansive view of what the Word can do when it escapes controlled spaces.',
+    promiseBody: 'Where DuelCasters introduces the logic of the world, Realms is where that world starts breathing. Expect bigger places, stranger magic, and a more expansive view of what the arcane can do when it escapes controlled spaces.',
   },
   spires: {
     key: 'spires',
