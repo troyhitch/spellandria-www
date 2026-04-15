@@ -5,7 +5,7 @@ import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://spellandria.com',
+  site: 'https://spellrealms.com',
   output: 'static',
   vite: {
     plugins: [tailwindcss()],

@@ -14,8 +14,8 @@ import { getGameByHostOrPath } from '../data/games';
 import '../styles/global.css';
 
 const game = getGameByHostOrPath(Astro.url.hostname, Astro.url.pathname);
-const title = game ? `${game.fullTitle} — Spellandria` : 'Spellandria — Official Franchise Portal';
-const description = game ? game.description : 'Enter Spellandria: a premium fantasy game universe of arcane power, living lore, community, news, and collectible worlds.';
+const title = game ? `${game.fullTitle} — SpellRealms` : 'SpellRealms — Official Franchise Portal';
+const description = game ? game.description : 'Enter SpellRealms: a premium fantasy game universe of arcane power, living lore, community, news, and collectible worlds.';
 const ogImage = game ? game.art : '/assets/generated/spellandria-hero-world.jpg';
 ---
 
@@ -42,12 +42,12 @@ const ogImage = game ? game.art : '/assets/generated/spellandria-hero-world.jpg'
         <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <img
             src="/assets/logo/SPELLANDRIA_logo-thumb.png"
-            alt="Spellandria"
+            alt="SpellRealms"
             class="h-12 w-auto max-w-[200px]"
             style="filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5)); opacity: 0.85;"
           />
           <p class="text-xs text-center" style="color: rgba(244,239,232,0.4);">
-            &copy; {new Date().getFullYear()} Spellandria. All rights reserved.
+            &copy; {new Date().getFullYear()} SpellRealms. All rights reserved.
           </p>
           <nav class="flex gap-6" aria-label="Footer navigation">
             {['World', 'News', 'Community', 'Shop'].map(link => (

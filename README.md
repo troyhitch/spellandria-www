@@ -1,6 +1,6 @@
 # spellandria-www
 
-Official franchise portal for the Spellandria game universe. Built with Astro + Tailwind v4, deployed via Cloudflare Pages.
+Official franchise portal for the SpellRealms game universe. Built with Astro + Tailwind v4, deployed via Cloudflare Pages.
 
 ## Stack
 - **Framework:** Astro 5
@@ -52,7 +52,7 @@ spellandria-astro/
 │   └── assets/
 │       ├── generated/        # AI-generated promotional imagery
 │       ├── identity-thumbs/  # Drive-sourced franchise identity art
-│       └── logo/             # Spellandria wordmark
+│       └── logo/             # SpellRealms wordmark
 ├── src/
 │   ├── components/
 │   │   ├── Nav.astro
@@ -92,6 +92,6 @@ Options (in order of complexity):
 - On-demand: Cloudflare KV or D1 for edge-rendered news (requires `output: 'server'`)
 
 ## Domain setup (Cloudflare)
-1. Add `spellandria.com` to Cloudflare DNS
+1. Add `spellrealms.com` to Cloudflare DNS
 2. In Cloudflare Pages, set the custom domain on the `spellandria-www` project
-3. Update `astro.config.mjs` `site` to `https://spellandria.com`
+3. Update `astro.config.mjs` `site` to `https://spellrealms.com`

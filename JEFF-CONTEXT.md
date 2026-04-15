@@ -1,10 +1,10 @@
-# Jeff Context — Spellandria WWW
+# Jeff Context — SpellRealms WWW
 
 Last updated: 2026-04-12
 
 ## What this is
-Official franchise portal for the Spellandria game universe.
-Live at: **https://spellandria.com**
+Official franchise portal for the SpellRealms game universe.
+Live at: **https://spellrealms.com**
 
 ## Stack
 - Astro 5 + Tailwind v4
@@ -14,7 +14,7 @@ Live at: **https://spellandria.com**
 ## Cloudflare
 - Account ID: `31395a65bc8e08eb7d7aafd3bdf6aade`
 - Project: `spellandria-www`
-- Custom domains: `spellandria.com`, `www.spellandria.com`
+- Custom domains: `spellrealms.com`, `www.spellrealms.com`
 - Pages project URL: `https://spellandria-www.pages.dev`
 
 ## GitHub
@@ -33,10 +33,10 @@ npx wrangler@latest pages deploy dist --project-name=spellandria-www --branch=ma
 ```
 
 ## Assets
-- Identity art (Drive): `/Projects/Spellandria/_identity/`
+- Identity art (Drive): `/Projects/SpellRealms/_identity/`
 - Local assets: `public/assets/`
   - `identity-thumbs/` — Duelcasters, Realms, Spires key art
-  - `logo/` — Spellandria wordmark (SPELLANDRIA_logo-thumb.png)
+  - `logo/` — SpellRealms wordmark (SPELLANDRIA_logo-thumb.png)
   - `generated/` — AI-generated promo imagery
 
 ## Logo note
@@ -49,7 +49,7 @@ Troy needs to export a flat/simplified version from Affinity Designer for small-
 2. Shop: wire Shopify Storefront API into `SectionShop.astro`
 3. News: add real content (Astro content collections, or headless CMS)
 4. Auto-deploy: connect GitHub repo in Cloudflare Pages dashboard via OAuth
-5. Lore: real Spellandria world content for `SectionWorld.astro`
+5. Lore: real SpellRealms world content for `SectionWorld.astro`
 
 ## Section map
 | Component | Section | Status |
