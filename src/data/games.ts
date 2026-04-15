@@ -37,8 +37,8 @@ export const games: Record<GameKey, GameConfig> = {
   realms: {
     key: 'realms',
     subdomain: 'realms.spellrealms.com',
-    shortTitle: 'Crownholds',
-    fullTitle: 'Crownholds of the SpellRealms',
+    shortTitle: 'CrownHolds',
+    fullTitle: 'CrownHolds of the SpellRealms',
     kicker: 'Coming next',
     tagline: 'Journey beyond the towers into the fractured lands where power is claimed, fortified, and contested.',
     description: 'A broader adventure through the outer territories of SpellRealms, where ancient orders, ruined civilizations, and unstable magic systems collide across a world of rival domains, fortified borders, and living language.',
@@ -46,9 +46,9 @@ export const games: Record<GameKey, GameConfig> = {
     status: 'In development',
     bullets: ['Expanding fantasy world', 'Territory and domain control', 'New regions and factions', 'Future chapter of the franchise'],
     overviewTitle: 'The world beyond the dueling halls',
-    overviewBody: 'Crownholds opens the map. Beyond the academies and ritual chambers lies a continent of fortified domains, broken covenants, vanished languages, and territories that remember old wars better than the people living in them.',
+    overviewBody: 'CrownHolds opens the map. Beyond the academies and ritual chambers lies a continent of fortified domains, broken covenants, vanished languages, and territories that remember old wars better than the people living in them.',
     promiseTitle: 'A larger stage for SpellRealms',
-    promiseBody: 'Where DuelCasters introduces the logic of the world, Crownholds is where that world starts breathing at geopolitical scale. Expect rival domains, stranger magic, and a broader view of what the arcane can do when it shapes territory as well as battle.',
+    promiseBody: 'Where DuelCasters introduces the logic of the world, CrownHolds is where that world starts breathing at geopolitical scale. Expect rival domains, stranger magic, and a broader view of what the arcane can do when it shapes territory as well as battle.',
   },
   spires: {
     key: 'spires',
