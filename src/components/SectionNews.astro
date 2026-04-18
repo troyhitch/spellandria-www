@@ -52,11 +52,14 @@ const articles = [
     class="overflow-hidden mb-5 grid md:grid-cols-[1.2fr_0.8fr]"
     style="border-radius: 28px; border: 1px solid rgba(255,255,255,0.1); background: rgba(14,10,20,0.82); backdrop-filter: blur(18px); box-shadow: 0 24px 80px rgba(0,0,0,0.45);"
   >
-    <div class="relative min-h-[280px]">
+    <div
+      class="relative min-h-[280px] flex items-center justify-center overflow-hidden"
+      style="background: radial-gradient(circle at 50% 35%, rgba(255,255,255,0.06), transparent 34%), linear-gradient(180deg, #120c18 0%, #07050a 100%);"
+    >
       <img
         src={featured.image}
         alt="CrownHolds of the SpellRealms — the next chapter"
-        class="absolute inset-0 w-full h-full object-cover"
+        class="absolute inset-0 w-full h-full object-contain p-8"
       />
       <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(8,5,12,0.12), rgba(8,5,12,0.72));" aria-hidden="true"></div>
     </div>

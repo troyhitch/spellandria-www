@@ -69,11 +69,14 @@ const titles = [
         class="overflow-hidden no-underline transition-transform duration-150 hover:-translate-y-1"
         style="border-radius: 28px; border: 1px solid rgba(255,255,255,0.1); background: rgba(14,10,20,0.82); backdrop-filter: blur(18px); box-shadow: 0 24px 80px rgba(0,0,0,0.45); display: block;"
       >
-        <div class="h-56 overflow-hidden">
+        <div
+          class="h-56 overflow-hidden flex items-center justify-center"
+          style="background: radial-gradient(circle at 50% 35%, rgba(255,255,255,0.06), transparent 34%), linear-gradient(180deg, #120c18 0%, #07050a 100%);"
+        >
           <img
             src={t.src}
             alt={t.name}
-            class="w-full h-full object-cover"
+            class="w-full h-full object-contain p-6"
           />
         </div>
         <div class="p-6">
